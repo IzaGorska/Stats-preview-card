@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+/* font-family: 'Inter', sans-serif; */
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+
+:root {
+    --dark-bg-blue: hsl(233, 47%, 7%);
+    --dark-card-blue: hsl(244, 38%, 16%);
+    --violet: hsl(277, 64%, 61%);
+    --white: hsl(0, 0%, 100%);
+    --white-main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --white-stat-headings: hsla(0, 0%, 100%, 0.6)
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--dark-bg-blue);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+}
+
+div.card {
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 10px;
+    height: 50vh;
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+}
+
+div.text,
+div.img {
+    height: 100%;
+    width: 50%;
+}
+
+div.text {
+    background-color: var(--dark-card-blue);
+    color: var(--white);
+}
+
+div.img {
+    background: url("/images/image-header-mobile.jpg");
+    background-size: cover;
+    position: relative;
+
+}
+
+div.img::after {
+    content: "";
+    position: absolute;
+    background: var(--violet);
+    opacity: 55%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+div.info {
+    padding: 70px 70px 20px 80px;
+    height: 60%;
+
+}
+
+
+div.info span {
+    color: var(--violet);
+}
+
+div.info h2 {
+    font-size: 2.6em;
+    padding-bottom: 40px;
+}
+
+div.info p {
+    font-size: .9em;
+    color: var(--white-main-paragraph);
+    line-height: 2em;
+    letter-spacing: 0.8px;
+}
+
+div.stats {
+    padding: 70px 90px 20px 80px;
+    position: relative;
+    bottom: 0;
+
+}
+
+div.stats ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+div.stats ul li div {
+    font-size: 1.4em;
+    font-weight: 700;
+    padding: 5px;
+}
+
+div.stats ul li span {
+    text-transform: uppercase;
+    color: var(--white-stat-headings);
+    font-size: .7em;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+
+
+@media(max-width:1410px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media(max-width:1200px) {
+    body {
+        font-size: 13px;
+    }
+
+    div.info {
+        padding: 60px 70px 20px 70px;
+
+    }
+
+    div.stats {
+        padding: 60px 70px 20px 70px;
+
+    }
+
+}
+
+@media(max-width:1000px) {
+    body {
+        font-size: 12px;
+    }
+
+    div.stats {
+        padding: 70px 90px 10px 60px;
+
+
+    }
+}
+
+@media(max-width:920px) {
+    body {
+        font-size: 15px;
+    }
+
+    div.card {
+        flex-direction: column;
+        height: 80vh;
+        width: 70vw;
+    }
+
+    div.img {
+        height: calc(100%/3);
+        width: 100%;
+
+    }
+
+
+
+    div.text {
+        height: calc(100%/3*2);
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    div.info {
+        height: 70%;
+    }
+
+    div.stats {
+        padding: 50px 70px 0 70px;
+
+    }
+
+    div.stats ul li span {
+
+        margin-left: 0px;
+    }
+
+
+
+}
+
+@media(max-width:618px) {
+    body {
+        font-size: 10px;
+
+    }
+
+    div.card {
+        height: 80vh;
+        width: 85vw;
+
+    }
+
+
+    div.info {
+        padding: 40px 30px 10px 30px;
+        height: 50%;
+
+    }
+
+    div.info h2 {
+        font-size: 2.4em;
+        padding-bottom: 20px;
+    }
+
+    div.info p {
+        font-size: 1.1em;
+    }
+
+    div.stats {
+        height: 50%;
+        padding: 0;
+    }
+
+    div.stats ul {
+        flex-direction: column;
+    }
+
+    div.stats ul li {
+        padding: 10px;
+    }
+
+
+    div.stats ul li div {
+        font-size: 1.6em;
+        padding: 6px;
+    }
+
+
+
+}
+
+@media(max-width:386px) {
+    body {
+        font-size: 9px;
+    }
+
+}
